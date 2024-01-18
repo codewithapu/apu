@@ -3,10 +3,14 @@
     width: 100%;
     .Container {
         width: 100%;
-
+        font-family: Space Grotesk;
+        font-size: 1.3rem;
+        font-weight: 400;
+        letter-spacing: -0.04rem;
+        text-transform: uppercase;
+        color: #7b7b7b;
     }
 }
-
 
 .Hero {
     width: 100%;
@@ -16,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10rem;
+    padding: 13rem;
     position: relative;
 
     .NameBadge {
@@ -24,9 +28,10 @@
     }
 
     .APUSticker {
+        object-fit: contain;
         position: absolute;
         bottom: 0;
         user-select: none;
-        height: 34rem;
+        height: 39rem;
     }
 }

@@ -1,8 +1,35 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/pages/Home.module.scss'
+import NavBar from '@/components/NavBar'
+
+import Lenis from '@studio-freight/lenis';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+
+  const [dimension, setDimension] = useState({ width: 0, height: 0 });
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    const raf = (time: number) => {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    const resize = () => {
+      setDimension({ width: window.innerWidth, height: window.innerHeight })
+    }
+
+    window.addEventListener("resize", resize)
+    requestAnimationFrame(raf);
+    resize();
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -11,6 +38,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NavBar />
       <div className={styles.Hero}>
         <svg className={styles.NameBadge} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1302 289" fill="none">
           <path d="M149.068 100.18H76.9383V68.9239C76.9383 66.7867 76.6712 65.1839 76.1369 64.1153C75.8697 63.0467 75.3354 62.5124 74.534 62.5124C73.7325 62.5124 73.0647 63.0467 72.5304 64.1153C72.2633 65.1839 72.1297 66.7867 72.1297 68.9239V91.3643C72.1297 94.3029 72.2633 96.8408 72.5304 98.9779C73.0647 100.848 74.2668 102.852 76.1369 104.989C78.274 106.859 81.4798 109.13 85.7542 111.801C90.0285 114.472 96.0393 117.945 103.787 122.22L114.606 128.231C121.552 131.971 127.162 136.111 131.436 140.653C135.978 145.194 139.451 150.537 141.855 156.682C144.526 162.826 146.396 170.173 147.465 178.721C148.534 187.003 149.068 197.021 149.068 208.775V213.985C149.068 238.028 142.523 256.461 129.433 269.284C116.343 282.107 97.6422 288.519 73.3319 288.519C49.2886 288.519 30.989 282.241 18.4331 269.685C6.14436 256.862 0 238.295 0 213.985V188.339H72.1297V219.595C72.1297 221.732 72.2633 223.335 72.5304 224.403C73.0647 225.472 73.7325 226.006 74.534 226.006C75.3354 226.006 75.8697 225.606 76.1369 224.804C76.6712 223.736 76.9383 222.133 76.9383 219.995V196.353C76.9383 193.414 76.6712 191.01 76.1369 189.14C75.8697 187.27 74.8011 185.4 72.9311 183.53C71.3282 181.66 68.5232 179.523 64.516 177.118C60.7759 174.714 55.433 171.508 48.4872 167.501L35.6641 160.288C28.7183 156.281 22.8411 152.007 18.0324 147.465C13.4909 142.656 9.88447 137.046 7.213 130.635C4.54153 124.223 2.67146 116.743 1.60287 108.195C0.534287 99.6458 0 89.4942 0 77.7398V74.1333C0 49.8229 6.27796 31.3898 18.8339 18.8339C31.3898 6.27795 49.5558 0 73.3319 0C97.6422 0 116.343 6.41152 129.433 19.2346C142.523 32.0576 149.068 50.3572 149.068 74.1333V100.18Z" fill="#CCC1A6" />
@@ -28,7 +56,9 @@ export default function Home() {
       </div>
       <div className={styles.Wraper}>
         <div className={styles.Container}>
-1
+          <h2>
+            Supriya Mahato is a India-based Design designer with a career spanning over 6 years in the industry building products, digital experiences, brands and simply fun and engaging things people love to use.
+          </h2>
         </div>
       </div>
 

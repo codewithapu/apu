@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +7,39 @@
     border: none;
 }
 
+html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+html{
+    font-size: 62.5%;
+}
+
 body{
     background-color: #fff;
 }
 
+@font-face {
+    font-family: N27 Regular;
+    src: url('/fonts/n27Regular.woff');
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

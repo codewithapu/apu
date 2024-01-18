@@ -1,0 +1,37 @@
+@mixin Link {
+    text-decoration: none;
+    font-family: N27 Regular;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #222;
+    text-wrap: nowrap;
+    padding: 1rem;
+    letter-spacing: -0.01rem;
+}
+
+.NavBar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #c3b592;
+    background-color: #fff;
+    .NavBarContainer {
+        display: flex;
+        width: 100%;
+        max-width: 180rem;
+        justify-content: space-between;
+        .NameLink {
+            @include Link();
+        }
+
+        .NavLinks {
+            display: flex;
+            align-items: center;
+            .Link{
+                @include Link();
+            }
+            
+        }
+    }
+}
