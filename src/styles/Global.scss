@@ -43,3 +43,8 @@ body{
 ::-webkit-scrollbar{
     display: none;
 }
+
+::selection{
+  color: #fff;
+  background: #222;
+}

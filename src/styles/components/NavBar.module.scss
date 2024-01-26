@@ -5,7 +5,7 @@
     text-transform: uppercase;
     color: #222;
     text-wrap: nowrap;
-    padding: 1rem;
+    padding: 2rem 1rem;
     letter-spacing: -0.01rem;
 }
 
@@ -14,24 +14,38 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #c3b592;
-    background-color: #fff;
     .NavBarContainer {
+        background-color: #ddd5d0;
         display: flex;
         width: 100%;
         max-width: 180rem;
         justify-content: space-between;
+        padding: 0rem 2rem;
         .NameLink {
             @include Link();
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .SMLogo {
+                height: 2rem;
+                width: 2rem;
+            }
         }
 
         .NavLinks {
             display: flex;
             align-items: center;
-            .Link{
+            .Link {
                 @include Link();
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                opacity: 0.7;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    opacity: 1;
+                }
             }
-            
         }
     }
 }

@@ -1,0 +1,57 @@
+@mixin Link {
+    text-decoration: none;
+    font-family: N27 Regular;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #222;
+    text-wrap: nowrap;
+    padding: 2rem 1rem;
+    letter-spacing: -0.01rem;
+}
+
+.Footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.03rem solid #b1b1b1;
+    .FooterContainer {
+        background-color: #fff;
+        display: flex;
+        width: 100%;
+        max-width: 180rem;
+        justify-content: space-between;
+        padding: 4rem 2rem;
+        .ContactMail{
+            text-decoration: none;
+            font-family: N27 Regular;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: #797979;
+            text-wrap: nowrap;
+            line-height: 100%;
+            padding: 2rem 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            flex-direction: column;
+
+            letter-spacing: -0.01rem;
+            .LinkToMail{
+                text-decoration: none;
+                font-family: Brockmann Medium;
+                font-size: 1.7rem;
+                text-transform: lowercase;
+                color: #222;
+                text-wrap: nowrap;
+                line-height: 90%;
+                letter-spacing: -0.06rem;
+
+                transition: 0.3s ease-in-out;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
