@@ -4,10 +4,40 @@ import styles from '@/styles/pages/Home.module.scss'
 import NavBar from '@/components/NavBar'
 
 import Lenis from '@studio-freight/lenis';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Footer from '@/components/Footer';
 
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 export default function Home() {
+
+  // GSAP Starts Here
+
+  const triggerElement = useRef(null)
+  const slider = useRef(null)
+  let direction = -1
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: 0,
+        end: window.innerHeight,
+        scrub: 0.25,
+        onUpdate: event => direction = event.direction * -1
+      },
+      x: "-=240px"
+    })
+  }, [])
+
+
+  // GSAP Ends Here
+
+
+  // Lenis Scroll Starts Here
 
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   useEffect(() => {
@@ -30,6 +60,8 @@ export default function Home() {
       window.removeEventListener("resize", resize);
     }
   }, [])
+
+  // Lenis Scroll Ends Here
 
   return (
     <>
@@ -64,18 +96,68 @@ export default function Home() {
               <p className={styles.Label}>product designer & full stack Engineer</p>
               <p className={styles.Label}>from india (IN)</p>
             </div>
+
+            <div className={styles.Technologies}>
+              <p className={styles.Label}>my superpowers are in</p>
+
+              <div className={styles.sliderContainer}>
+                <div ref={slider} className={styles.Slider}>
+                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} />
+                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} />
+                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} />
+                </div>
+              </div>
+            </div>
           </div>
 
 
+          <div className={styles.Creations}>
+            <h3 className={styles.Statement}>
+              explore creations
+            </h3>
+
+            <ul className={styles.CreationsGrid}>
+              <li className={styles.Creation}>
+                <img src="https://images.ctfassets.net/c1zhnszcah7h/4ju4IHUsBgzPLahy5CrG1q/9be1c366372f11ce86457f94c8433a3e/Des___Eng_Square_2x__1_.png?w=960&h=960&q=96&fm=webp" className={styles.Thumbnail} />
+              </li>
+              <li className={styles.Creation}>
+                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
+              </li>
+              <li className={styles.Creation}>
+                <img src="https://images.ctfassets.net/c1zhnszcah7h/1oqIt4961AMm6Miwn7CXur/afaf03f7f2dd7b14a86ad9d06b327ef5/Square_Performance_Cards_-_Header_2x.png?w=1920&h=1920&q=96&fm=webp" className={styles.Thumbnail} />
+              </li>
+
+              <li className={styles.Creation}>
+                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
+              </li>
+
+
+              <li className={styles.Creation}>
+                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
+              </li>
+              <li className={styles.Creation}>
+                <img src="https://images.ctfassets.net/c1zhnszcah7h/1oqIt4961AMm6Miwn7CXur/afaf03f7f2dd7b14a86ad9d06b327ef5/Square_Performance_Cards_-_Header_2x.png?w=1920&h=1920&q=96&fm=webp" className={styles.Thumbnail} />
+              </li>
+
+              <li className={styles.Creation}>
+                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
+              </li>
+            </ul>
+          </div>
+
           <div className={styles.Mission}>
-            <h3 className={styles.Statement}>Fueling the ascent of startups is my forte. From conceptualization to execution, I provide the strategic insights and technical finesse needed to propel your venture forward. Let's turn your vision into a minimalist masterpiece that leaves a lasting imprint.</h3>
+            <h3 className={styles.Statement}>
+
+              Beyond the business realm, I understand the importance of forging lasting connections. A brand is more than just a product or service—it's an experience. I specialize in crafting digital experiences that form enduring bonds between startups and their customers.
+
+            </h3>
           </div>
 
         </div>
       </div>
 
 
-      <Footer />
+      {/* <Footer /> */}
 
     </>
   )
