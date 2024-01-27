@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '@/styles/pages/Home.module.scss'
 import NavBar from '@/components/NavBar'
 
@@ -7,10 +6,12 @@ import Lenis from '@studio-freight/lenis';
 import { useState, useEffect, useRef } from 'react';
 import Footer from '@/components/Footer';
 
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 
 export default function Home() {
+
 
   // GSAP Starts Here
 
