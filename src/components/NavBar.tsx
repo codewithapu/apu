@@ -35,7 +35,7 @@ const NavBar = () => {
 
                     </Link>
                     <Link href="/" className={styles.Link}>
-                        hire me
+                        start a project
                     </Link>
                 </div>
             </div>

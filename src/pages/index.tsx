@@ -77,6 +77,11 @@ export default function Home() {
       <div className={styles.Wraper}>
         <div className={styles.Container}>
           <div className={styles.Hero}>
+            <div className={styles.TopLayer}>
+              <p className={styles.Label}>product designer & full stack Engineer</p>
+              <p className={styles.Label}>from india (IN)</p>
+            </div>
+
             <svg className={styles.NameBadge} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1715 158" fill="none">
               <path d="M60.06 136.64C84.7 136.64 94.16 125.42 94.16 113.32C94.16 102.1 86.02 95.28 71.72 91.76L47.52 85.82C24.42 80.32 8.14 67.78 8.14 43.58C8.14 16.96 31.02 0.0200195 60.94 0.0200195C93.28 0.0200195 110.88 18.5 116.16 35.22L96.14 45.78C93.72 35 82.5 20.92 60.94 20.92C42.9 20.92 31.24 29.72 31.24 43.14C31.24 54.36 39.6 60.74 52.58 63.82L77.88 69.76C104.94 76.36 117.7 91.98 117.7 112.88C117.7 137.3 97.9 157.98 59.62 157.98C25.52 157.98 6.16 138.18 0 121.24L19.58 110.24C23.98 124.98 39.38 136.64 60.06 136.64Z" fill="#22201E" />
               <path d="M190.468 157.98C154.388 157.98 129.748 132.9 129.748 96.6V2.00002H152.408V96.82C152.408 120.58 167.588 136.64 190.468 136.64C214.228 136.64 228.968 120.58 228.968 96.82V2.00002H251.628V96.6C251.628 132.9 227.208 157.98 190.468 157.98Z" fill="#22201E" />
@@ -92,11 +97,6 @@ export default function Home() {
               <path d="M1489.92 156V23.12H1440.64V2.00002H1562.3V23.12H1513.02V156H1489.92Z" fill="#22201E" />
               <path d="M1635.9 157.98C1589.48 157.98 1557.36 123.22 1557.36 79C1557.36 34.56 1589.48 0.0200195 1635.9 0.0200195C1682.32 0.0200195 1714.66 34.56 1714.66 79C1714.66 123.22 1682.32 157.98 1635.9 157.98ZM1580.9 79C1580.9 110.24 1602.68 136.2 1635.9 136.2C1669.12 136.2 1691.12 110.24 1691.12 79C1691.12 47.76 1669.12 21.8 1635.9 21.8C1602.68 21.8 1580.9 47.76 1580.9 79Z" fill="#22201E" />
             </svg>
-
-            <div className={styles.BottomLayer}>
-              <p className={styles.Label}>product designer & full stack Engineer</p>
-              <p className={styles.Label}>from india (IN)</p>
-            </div>
 
             <div className={styles.Technologies}>
               <p className={styles.Label}>my superpowers are in</p>
@@ -119,30 +119,20 @@ export default function Home() {
 
             <ul className={styles.CreationsGrid}>
               <li className={styles.Creation}>
-                <img src="https://images.ctfassets.net/c1zhnszcah7h/4ju4IHUsBgzPLahy5CrG1q/9be1c366372f11ce86457f94c8433a3e/Des___Eng_Square_2x__1_.png?w=960&h=960&q=96&fm=webp" className={styles.Thumbnail} />
+                <img draggable="false" src="https://images.unsplash.com/photo-1706211306695-5b383f8012a9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
               </li>
               <li className={styles.Creation}>
-                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
+                <img draggable="false" src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
               </li>
               <li className={styles.Creation}>
-                <img src="https://images.ctfassets.net/c1zhnszcah7h/1oqIt4961AMm6Miwn7CXur/afaf03f7f2dd7b14a86ad9d06b327ef5/Square_Performance_Cards_-_Header_2x.png?w=1920&h=1920&q=96&fm=webp" className={styles.Thumbnail} />
+                <img draggable="false" src="https://images.unsplash.com/photo-1683009427692-8a28348b0965?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
               </li>
 
               <li className={styles.Creation}>
-                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
+                <img draggable="false" src="https://images.unsplash.com/photo-1682686580433-2af05ee670ad?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
               </li>
 
 
-              <li className={styles.Creation}>
-                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
-              </li>
-              <li className={styles.Creation}>
-                <img src="https://images.ctfassets.net/c1zhnszcah7h/1oqIt4961AMm6Miwn7CXur/afaf03f7f2dd7b14a86ad9d06b327ef5/Square_Performance_Cards_-_Header_2x.png?w=1920&h=1920&q=96&fm=webp" className={styles.Thumbnail} />
-              </li>
-
-              <li className={styles.Creation}>
-                <img src="https://images.ctfassets.net/c1zhnszcah7h/2szccTy52nQoUtiApSJIi2/2e8cc4fafaffd7edd9abf002506827ff/Header_01__1_.png?w=1920&h=1147&q=96&fm=webp" className={styles.Thumbnail} />
-              </li>
             </ul>
           </div>
 
