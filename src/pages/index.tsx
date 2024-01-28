@@ -79,8 +79,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Supriya M.</title>
+        <title>Supriyo M.</title>
         <meta name="description" content="Design Engineer From India" />
+        <meta property="og:site_name" content="Supriyo M."/>
+        <meta property="og:title" content="Meet Supriyo Design Engineer From India"/>
+        <meta property="og:image" content="https://ik.imagekit.io/0h5il6u6e/banner.png?updatedAt=1706465584438"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
