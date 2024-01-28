@@ -1,50 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  scroll-behavior: smooth;
 }
+
 
 html.lenis {
-    height: auto;
-  }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  }
-
-html{
-    font-size: 62.5%;
+  height: auto;
 }
 
-body{
-    background-color: #fff;
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
 }
 
-@font-face {
-    font-family: N27 Regular;
-    src: url('/fonts/n27Regular.woff');
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
-::-webkit-scrollbar{
-    display: none;
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
-::selection{
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
   color: #fff;
   background: #222;
 }

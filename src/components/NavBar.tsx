@@ -14,7 +14,7 @@ const NavBar = () => {
                     {/* Supriya m. */}
                 </Link>
                 <div className={styles.NavLinks}>
-                    <Link href="/" className={styles.Link}>
+                    <Link href="#creations" className={styles.Link}>
                         works
                     </Link>
                     <Link href="/" className={styles.Link}>

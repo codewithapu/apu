@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import styles from '@/styles/pages/Home.module.scss'
 import NavBar from '@/components/NavBar'
-
 import Lenis from '@studio-freight/lenis';
 import { useState, useEffect, useRef } from 'react';
 import Footer from '@/components/Footer';
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { Creation } from '@/types/types';
+import CreationCard from '@/components/Creations/Card';
 
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
         scrub: 0.25,
         onUpdate: event => direction = event.direction * -1
       },
-      x: "-=240px"
+      x: "-=260px"
     })
   }, [])
 
@@ -64,6 +64,18 @@ export default function Home() {
 
   // Lenis Scroll Ends Here
 
+
+  const [cards, setCards] = useState<Creation[]>([]);
+
+  useEffect(() => {
+    import('../../public/data/creations.json').then((creationData) => {
+      setCards(creationData.default as Creation[]);
+      const top4Cards = creationData.default.slice(0, 4);
+      setCards(top4Cards as Creation[]);
+    });
+  }, []);
+
+
   return (
     <>
       <Head>
@@ -74,7 +86,7 @@ export default function Home() {
       </Head>
       <NavBar />
 
-      <div className={styles.Wraper}>
+      <div className={styles.Wraper} data-lenis-prevent-touch>
         <div className={styles.Container}>
           <div className={styles.Hero}>
             <div className={styles.TopLayer}>
@@ -103,52 +115,31 @@ export default function Home() {
 
               <div className={styles.sliderContainer}>
                 <div ref={slider} className={styles.Slider}>
-                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} />
-                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} />
-                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} />
+                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} draggable="false" />
+                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} draggable="false" />
+                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} draggable="false" />
+                  <img className={styles.TechBanner} src="/images/tech.svg" ref={triggerElement} draggable="false" />
                 </div>
               </div>
             </div>
           </div>
 
-
-          <div className={styles.Creations}>
-            <h3 className={styles.Statement}>
-              explore creations
-            </h3>
+          <div className={styles.Creations} id='creations'>
 
             <ul className={styles.CreationsGrid}>
-              <li className={styles.Creation}>
-                <img draggable="false" src="https://images.unsplash.com/photo-1706211306695-5b383f8012a9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
-              </li>
-              <li className={styles.Creation}>
-                <img draggable="false" src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
-              </li>
-              <li className={styles.Creation}>
-                <img draggable="false" src="https://images.unsplash.com/photo-1683009427692-8a28348b0965?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
-              </li>
-
-              <li className={styles.Creation}>
-                <img draggable="false" src="https://images.unsplash.com/photo-1682686580433-2af05ee670ad?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className={styles.Thumbnail} />
-              </li>
-
-
+              {cards.map((card) => (
+                <li className={styles.Creation}>
+                  <CreationCard key={card.id} card={card} />
+                </li>
+              ))}
             </ul>
+
           </div>
-
-          <div className={styles.Mission}>
-            <h3 className={styles.Statement}>
-
-              Beyond the business realm, I understand the importance of forging lasting connections. A brand is more than just a product or service—it's an experience. I specialize in crafting digital experiences that form enduring bonds between startups and their customers.
-
-            </h3>
-          </div>
-
         </div>
       </div>
 
 
-      {/* <Footer /> */}
+      <Footer />
 
     </>
   )
