@@ -81,11 +81,15 @@ export default function Home() {
       <Head>
         <title>Supriyo M.</title>
         <meta name="description" content="Design Engineer From India" />
-        <meta property="og:site_name" content="Supriyo M."/>
-        <meta property="og:title" content="Meet Supriyo Design Engineer From India"/>
-        <meta property="og:image" content="https://ik.imagekit.io/0h5il6u6e/banner.png?updatedAt=1706465584438"/>
+        <meta property="og:site_name" content="Supriyo M." />
+        <meta property="og:title" content="Meet Supriyo Design Engineer From India" />
+        <meta property="og:image" content="https://ik.imagekit.io/0h5il6u6e/banner.png?updatedAt=1706465584438" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:description"
+          content="Step into Supriyo M.'s Realm
+          Where UX Design Meets Full Stack Brilliance
+          Discover the Pinnacle of Luxurious Design and Code Symphony"/>
       </Head>
       <NavBar />
 
