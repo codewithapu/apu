@@ -27,7 +27,7 @@ const CreationCard: React.FC<CardProps> = ({ card }) => (
 
         key={card.id}
     >
-        <Link href={card.link} className={styles.CardLink} draggable="false">
+        <Link href={card.link} className={styles.CardLink} draggable="false" target="_blank">
             <img draggable="false" className={styles.Thumbnail} src={card.thumbnail_url} alt={card.title} />
             <div className={styles.CardData}>
                 <p className={styles.Tag}>

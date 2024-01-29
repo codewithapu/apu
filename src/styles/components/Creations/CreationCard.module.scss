@@ -7,6 +7,10 @@
             .CardData {
                 opacity: 0.6;
             }
+
+            .Thumbnail {
+                opacity: 0.9;
+            }
         }
         text-decoration: none;
         .Thumbnail {
@@ -16,13 +20,14 @@
             height: auto;
             display: block;
             margin: 0rem 0rem 0.4rem 0rem;
-            border-radius: 2%;
+            // border-radius: 2%;
+            transition: 0.2s ease-in-out;
         }
 
         .CardData {
             margin: 1rem 0rem;
             transition: 0.2s ease-in-out;
-            // padding: 0rem 1rem;
+            user-select: none;
             .Tag {
                 font-family: Geomanist Medium;
                 font-size: 1.3rem;
@@ -32,8 +37,7 @@
                 align-items: center;
                 gap: 1rem;
                 margin: 0.6rem 0rem;
-                // display: none;
-
+                display: none;
 
                 .Circle {
                     display: none;
@@ -46,7 +50,7 @@
 
             .Title {
                 font-family: Geomanist Book;
-                margin: 0.6rem 0rem;
+                // margin: 0.6rem 0rem;
                 letter-spacing: 0rem;
                 font-size: 1.6rem;
                 color: #111;
@@ -61,7 +65,7 @@
                 font-weight: 1.3rem;
                 color: #474747;
                 letter-spacing: 0rem;
-                // display: none;
+                display: none;
             }
         }
     }
