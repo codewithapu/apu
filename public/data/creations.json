@@ -1,14 +1,16 @@
 [
     {
         "id": "1",
-        "thumbnail_url": "https://images.unsplash.com/photo-1671920090611-9a40303b52cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8fA%3D%3D",
-        "title": "Collaboration Secrets : Design",
-        "description": "Learn how engineers and designers collaborate at Spotify: what works well, what can go wrong... and everything in between!",
-        "tag": "user experience"
+        "thumbnail_url": "https://ik.imagekit.io/0h5il6u6e/Creations/BookBanner.png?updatedAt=1706525213617",
+        "link": "https://amzn.eu/d/2WIOj2I",
+        "title": "Collaboration secrets : user experience",
+        "description": "Learn how engineers and designers collaborate at Spotify: what works well, and everything in between!",
+        "tag": "#userexperience"
     },
     {
         "id": "2",
-        "thumbnail_url": "https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8fA%3D%3D",
+        "thumbnail_url": "https://ik.imagekit.io/0h5il6u6e/Creations/NEXT%20EVENT.png?updatedAt=1706526302183",
+        "link": "https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8fA%3D%3D",
         "title": "Card 2",
         "description": "Description for Card 2",
         "tag": "ai in design"
@@ -16,6 +18,7 @@
     {
         "id": "3",
         "thumbnail_url": "https://images.unsplash.com/photo-1506619928596-bb8c201545cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNXx8fGVufDB8fHx8fA%3D%3D",
+        "link": "https://images.unsplash.com/photo-1506619928596-bb8c201545cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNXx8fGVufDB8fHx8fA%3D%3D",
         "title": "Card 3",
         "description": "Description for Card 3",
         "tag": "ai in design"
@@ -23,6 +26,7 @@
     {
         "id": "1",
         "thumbnail_url": "https://plus.unsplash.com/premium_photo-1706152482966-a295c922cdcf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2Mnx8fGVufDB8fHx8fA%3D%3D",
+        "link": "https://plus.unsplash.com/premium_photo-1706152482966-a295c922cdcf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2Mnx8fGVufDB8fHx8fA%3D%3D",
         "title": "Card 1",
         "description": "Description for Card 1",
         "tag": "ux tips"
@@ -30,6 +34,7 @@
     {
         "id": "2",
         "thumbnail_url": "https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8fA%3D%3D",
+        "link": "https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8fA%3D%3D",
         "title": "Card 2",
         "description": "Description for Card 2",
         "tag": "Tag 2"
@@ -37,6 +42,8 @@
     {
         "id": "3",
         "thumbnail_url": "https://images.unsplash.com/photo-1506619928596-bb8c201545cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNXx8fGVufDB8fHx8fA%3D%3D",
+        "link": "https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8fA%3D%3D",
+       
         "title": "Card 3",
         "description": "Description for Card 3",
         "tag": "Tag 3"

@@ -44,3 +44,26 @@ body {
   color: #fff;
   background: #222;
 }
+
+
+// Enternal Fonts
+
+@font-face {
+  font-family: Geomanist Regular;
+  src: url(/fonts/geomanist.woff);
+}
+
+@font-face {
+  font-family: Geomanist Book;
+  src: url(/fonts/Geomanist-Book.woff);
+}
+
+@font-face {
+  font-family: Geomanist Medium;
+  src: url(/fonts/Geomanist-Book.woff);
+}
+
+@font-face {
+  font-family: Geomanist Bold;
+  src: url(/fonts/Geomanist-Bold.woff);
+}

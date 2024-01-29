@@ -5,4 +5,5 @@ export interface Creation {
     description: string;
     tag: string;
     custom: number;
+    link: string;
   }

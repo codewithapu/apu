@@ -70,7 +70,7 @@ export default function Home() {
   useEffect(() => {
     import('../../public/data/creations.json').then((creationData) => {
       setCards(creationData.default as Creation[]);
-      const top4Cards = creationData.default.slice(0, 4);
+      const top4Cards = creationData.default.slice(0, 14);
       setCards(top4Cards as Creation[]);
     });
   }, []);
