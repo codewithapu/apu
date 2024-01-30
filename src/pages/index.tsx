@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '@/styles/pages/Home.module.scss'
-import NavBar from '@/components/NavBar'
 import Lenis from '@studio-freight/lenis';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -93,7 +92,6 @@ export default function Home() {
           Where UX Design Meets Full Stack Brilliance
           Discover the Pinnacle of Luxurious Design and Code Symphony"/>
       </Head>
-      <NavBar />
 
       <div className={styles.Wraper} data-lenis-prevent-touch>
         <div className={styles.Container}>

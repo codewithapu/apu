@@ -3,6 +3,7 @@ import { Creation } from '@/types/types';
 import styles from '@/styles/components/Creations/CreationCard.module.scss'
 import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 
 interface CardProps {
     card: Creation;
@@ -27,7 +28,7 @@ const CreationCard: React.FC<CardProps> = ({ card }) => (
 
         key={card.id}
     >
-        <Link href={card.link} className={styles.CardLink} draggable="false" target="_blank">
+        <Link href={`/creations/${encodeURIComponent(card.title.toLowerCase().replace(/ /g, '-'))}`} className={styles.CardLink} draggable="false">
             <img draggable="false" className={styles.Thumbnail} src={card.thumbnail_url} alt={card.title} />
             <div className={styles.CardData}>
                 <h2 className={styles.Title}>

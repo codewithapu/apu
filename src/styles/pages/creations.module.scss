@@ -1,0 +1,21 @@
+@use "../color";
+@import "../color";
+
+.Wraper {
+    display: flex;
+
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    .Container {
+        width: 100%;
+        font-family: Space Grotesk;
+        font-size: 1.3rem;
+        font-weight: 400;
+        letter-spacing: -0.04rem;
+        color: #7b7b7b;
+        max-width: 180rem;
+        overflow: hidden;
+        
+    }
+}
