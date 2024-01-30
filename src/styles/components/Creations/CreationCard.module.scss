@@ -33,11 +33,14 @@
             user-select: none;
 
             .Title {
-                font-family: Geomanist Book;
+                font-family: Geomanist Medium;
                 letter-spacing: 0rem;
-                font-size: 1.5rem;
+                font-weight: 500;
+                font-size: 1.4rem;
                 color: $themedark;
+                color: $wraperslate;
                 display: inline-flex;
+                letter-spacing: 0.04rem;
                 gap: 1rem;
                 line-height: 130%;
             }

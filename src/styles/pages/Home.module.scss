@@ -23,10 +23,11 @@
     width: 100%;
     background-color: $surfaceprimary;
 
+    background: linear-gradient(180deg, $burnertheme 0%, #121212 96.75%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 4rem;
+    padding: 4rem 4rem 0rem 4rem;
     flex-direction: column;
     position: relative;
     gap: 2rem;
@@ -55,7 +56,7 @@
 
             font-size: 1.3rem;
             text-transform: uppercase;
-            color: $themedark;
+            color: $themelight;
             text-wrap: nowrap;
             padding: 2rem 1rem;
             letter-spacing: -0.01rem;
@@ -67,16 +68,18 @@
         align-items: center;
         flex-direction: column;
         gap: 2rem;
-        padding: 2rem 0rem;
+        margin-top: 3rem;
+        padding: 2rem 2rem 4rem 2rem;
+        background-color: #1212123f;
         .Label {
             font-family: Space Grotesk;
 
             font-size: 1.3rem;
             font-weight: 400;
-            letter-spacing: -0.04rem;
+            letter-spacing: -0.02rem;
             line-height: 160%;
-            color: $themedark;
-            opacity: 0.6;
+            color: $themelight;
+            opacity: 0.4;
             text-transform: uppercase;
         }
 
@@ -89,7 +92,7 @@
 
                 .TechBanner {
                     height: 2.8rem;
-                    opacity: 0.5;
+                    opacity: 0.2;
                     user-select: none;
                 }
             }
@@ -99,9 +102,11 @@
 
 
 .Creations {
-    padding: 6rem 4rem;
+    padding: 1rem 4rem 4rem 4rem;
     display: flex;
     flex-direction: column;
+    background-color: #1212123f;
+
     gap: 2rem;
 
     @media only screen and (max-width: 800px) {

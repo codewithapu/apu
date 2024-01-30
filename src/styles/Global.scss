@@ -1,3 +1,5 @@
+@use "./color";
+@import "./color";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -5,7 +7,7 @@
   margin: 0;
   padding: 0;
   border: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html.lenis {
@@ -34,6 +36,7 @@ html {
 
 body {
   background-color: #fff;
+  background-color: #222;
 }
 
 ::-webkit-scrollbar {
@@ -65,4 +68,16 @@ body {
 @font-face {
   font-family: Geomanist Bold;
   src: url(/fonts/Geomanist-Bold.woff);
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color: $surfaceprimarydark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body{
+    background-color: $surfaceprimarydark;
+  }
 }

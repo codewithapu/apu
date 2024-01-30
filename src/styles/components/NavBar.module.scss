@@ -7,7 +7,7 @@
 
     font-size: 1.3rem;
     text-transform: uppercase;
-    color: #222;
+    color: $themelight;
     text-wrap: nowrap;
     padding: 2rem 1rem;
     letter-spacing: -0.01rem;
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     .NavBarContainer {
-        background-color: #ddd5d0;
+        background-color: $burnertheme;
         display: flex;
         width: 100%;
         max-width: 180rem;
