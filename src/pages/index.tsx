@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar'
 import Lenis from '@studio-freight/lenis';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -108,7 +108,7 @@ export default function Home() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1715 158"
               fill="#fafafa"
-              initial={{ y: 50 }}
+              initial={{ y: 30 }}
               animate={{ y: 0 }}
               transition={{ duration: 1.2, ease: [0.785, 0.135, 0.15, 0.86] }}
             >
@@ -126,6 +126,12 @@ export default function Home() {
               <path d="M1489.92 156V23.12H1440.64V2.00002H1562.3V23.12H1513.02V156H1489.92Z" />
               <path d="M1635.9 157.98C1589.48 157.98 1557.36 123.22 1557.36 79C1557.36 34.56 1589.48 0.0200195 1635.9 0.0200195C1682.32 0.0200195 1714.66 34.56 1714.66 79C1714.66 123.22 1682.32 157.98 1635.9 157.98ZM1580.9 79C1580.9 110.24 1602.68 136.2 1635.9 136.2C1669.12 136.2 1691.12 110.24 1691.12 79C1691.12 47.76 1669.12 21.8 1635.9 21.8C1602.68 21.8 1580.9 47.76 1580.9 79Z" />
             </motion.svg>
+
+            {/* <div className={styles.CTALinks}>
+              <Link className={styles.CTALink} href="/">start a project</Link>
+              <Link className={styles.CTALink} href="/">chat with me</Link>
+            </div> */}
+
 
             <div className={styles.Technologies}>
               <p className={styles.Label}>my superpowers are in</p>

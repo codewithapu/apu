@@ -90,6 +90,10 @@
             flex-direction: row;
             gap: 4rem;
             align-items: flex-start;
+
+            @media only screen and (max-width: 800px) {
+                flex-direction: column;
+            }
             .CopyText {
                 color: #acacac;
                 font-family: Burner Font Bold;

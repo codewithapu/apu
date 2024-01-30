@@ -16,6 +16,7 @@
         color: #7b7b7b;
         max-width: 180rem;
         overflow: hidden;
+        
     }
 }
 
@@ -31,6 +32,10 @@
     flex-direction: column;
     position: relative;
     gap: 2rem;
+
+    @media only screen and (max-width: 800px) {
+        padding: 2rem 2rem;
+    }
     .NameBadge {
         width: 100%;
         object-fit: contain;
@@ -58,8 +63,70 @@
             text-transform: uppercase;
             color: $themelight;
             text-wrap: nowrap;
-            padding: 2rem 1rem;
+            padding: 2rem 0rem;
             letter-spacing: -0.01rem;
+        }
+    }
+
+    .CTALinks {
+        display: flex;
+        gap: 0.3rem;
+        padding: 2rem 0rem;
+        flex-direction: row-reverse;
+        user-select: none;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (max-width: 800px) {
+            padding: 2rem 2rem;
+        }
+
+        @media only screen and (max-width: 800px) {
+            flex-direction: column;
+            .CTALink{
+                width: 100%;
+            }
+        }
+
+        .CTALink {
+            background-color: #fff;
+            border:0.2rem solid #fff;
+            // background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+
+            font-family: Space Grotesk;
+            text-wrap: nowrap;
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: -0.02rem;
+            line-height: 100%;
+            color: $themelight;
+            text-transform: uppercase;
+            color: #121212;
+            padding: 2rem 3rem;
+            border-radius: 4rem;
+            box-sizing: content-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                border:0.2rem solid #fff;
+                background-color: #fff;
+                color: #222;
+            }
+            &:nth-child(2) {
+                border:0.2rem solid #fff;
+                background-color: transparent;
+                color: #fff;
+                transition: 0.2s ease-in-out;
+                &:hover{
+                    border:0.2rem solid #fff;
+                    background-color: #fff;
+                    color: #222;
+                }
+            }
         }
     }
 
@@ -100,7 +167,6 @@
     }
 }
 
-
 .Creations {
     padding: 1rem 4rem 4rem 4rem;
     display: flex;
@@ -112,16 +178,6 @@
     @media only screen and (max-width: 800px) {
         padding: 6rem 1.4rem;
     }
-    .Statement {
-        font-family: Urbanist;
-        font-size: 2.4rem;
-        font-weight: 700;
-        letter-spacing: -0.03rem;
-        line-height: 160%;
-        color: #bdb4ae;
-        max-width: 180rem;
-        width: 50%;
-    }
 
     .CreationsGrid {
         list-style: none;
@@ -130,11 +186,11 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 2.4rem;
 
-        @media only screen and (max-width: 1400px){
+        @media only screen and (max-width: 1400px) {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        @media only screen and (max-width: 1000px){
+        @media only screen and (max-width: 1000px) {
             grid-template-columns: repeat(2, 1fr);
         }
 

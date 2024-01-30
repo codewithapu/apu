@@ -2,10 +2,12 @@
 @import "../../color";
 
 .CreationCard {
+    width: 100%;
     .CardLink {
         display: flex;
         flex-direction: column;
         gap: 0rem;
+        width: 100%;
         &:hover {
             .CardData {
                 opacity: 0.6;
@@ -18,13 +20,14 @@
         text-decoration: none;
         .Thumbnail {
             user-select: none;
-            max-width: 100%;
+            width: 100%;
             user-select: none;
+            object-fit: contain;
             height: auto;
-            display: block;
+            display: flex;
             margin: 0rem 0rem 0.4rem 0rem;
             transition: 0.2s ease-in-out;
-            z-index: 100;
+            // box-shadow: 0 4px 60px rgba(0, 0, 0, 0.4);
         }
 
         .CardData {
@@ -40,7 +43,7 @@
                 color: $themedark;
                 color: $wraperslate;
                 display: inline-flex;
-                letter-spacing: 0.04rem;
+                letter-spacing: 0.03rem;
                 gap: 1rem;
                 line-height: 130%;
             }
