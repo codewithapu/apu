@@ -1,3 +1,6 @@
+@use "../color";
+@import "../color";
+
 .Wraper {
     display: flex;
 
@@ -10,7 +13,6 @@
         font-size: 1.3rem;
         font-weight: 400;
         letter-spacing: -0.04rem;
-        // text-transform: uppercase;
         color: #7b7b7b;
         max-width: 180rem;
         overflow: hidden;
@@ -19,7 +21,7 @@
 
 .Hero {
     width: 100%;
-    background-color: #ddd5d0;
+    background-color: $surfaceprimary;
 
     display: flex;
     align-items: center;
@@ -53,7 +55,7 @@
 
             font-size: 1.3rem;
             text-transform: uppercase;
-            color: #222;
+            color: $themedark;
             text-wrap: nowrap;
             padding: 2rem 1rem;
             letter-spacing: -0.01rem;
@@ -73,7 +75,8 @@
             font-weight: 400;
             letter-spacing: -0.04rem;
             line-height: 160%;
-            color: #7b7b7b;
+            color: $themedark;
+            opacity: 0.6;
             text-transform: uppercase;
         }
 
@@ -94,19 +97,6 @@
     }
 }
 
-.Mission {
-    padding: 1rem 4rem;
-    .Statement {
-        font-family: Space Grotesk;
-        font-size: 1.7rem;
-        font-weight: 400;
-        letter-spacing: -0.04rem;
-        line-height: 160%;
-        color: #7b7b7b;
-        max-width: 180rem;
-        width: 50%;
-    }
-}
 
 .Creations {
     padding: 6rem 4rem;

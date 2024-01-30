@@ -97,7 +97,7 @@ export default function Home() {
         <div className={styles.Container}>
           <div className={styles.Hero}>
             <div className={styles.TopLayer}>
-              <p className={styles.Label}>product designer & full stack Engineer</p>
+              <p className={styles.Label}>design Engineer</p>
               <p className={styles.Label}>from india (IN)</p>
             </div>
 
