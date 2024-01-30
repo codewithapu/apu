@@ -14,7 +14,6 @@ interface CreationPageProps {
 
 const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
 
-
     // Lenis Scroll Starts Here
 
     const [dimension, setDimension] = useState({ width: 0, height: 0 });
@@ -47,12 +46,21 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
         return <div>Loading...</div>;
     }
 
+    const transitionVariants = {
+        initial: { opacity: 0, y: '100%', scale: 1 },
+        enter: { opacity: 1, y: '0%', scale: 1 },
+        exit: { opacity: 0, y: '-100%', scale: 1 },
+    };
+
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ y: 30 }}
+            animate={{ y: 0 }}
+            exit="exit"
+            transition={{ duration: 1.2, ease: [0.785, 0.135, 0.15, 0.86] }}
         >
+
+            
             <Head>
                 <title>Creations</title>
             </Head>
