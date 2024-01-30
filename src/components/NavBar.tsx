@@ -21,7 +21,7 @@ const NavBar = () => {
 
 
     return (
-        <div className={styles.NavBar}>
+        <div className={styles.NavBar} style={{zIndex:200}}>
             <div className={styles.NavBarContainer}>
                 <Link href="/" className={styles.NameLink}>
 

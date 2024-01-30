@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '@/styles/pages/Home.module.scss'
-import Lenis from '@studio-freight/lenis';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -37,33 +36,6 @@ export default function Home() {
 
 
   // GSAP Ends Here
-
-
-  // Lenis Scroll Starts Here
-
-  const [dimension, setDimension] = useState({ width: 0, height: 0 });
-  useEffect(() => {
-    const lenis = new Lenis()
-
-    const raf = (time: number) => {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    const resize = () => {
-      setDimension({ width: window.innerWidth, height: window.innerHeight })
-    }
-
-    window.addEventListener("resize", resize)
-    requestAnimationFrame(raf);
-    resize();
-
-    return () => {
-      window.removeEventListener("resize", resize);
-    }
-  }, [])
-
-  // Lenis Scroll Ends Here
 
 
   const [cards, setCards] = useState<Creation[]>([]);

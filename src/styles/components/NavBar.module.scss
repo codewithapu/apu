@@ -18,8 +18,10 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
     .NavBarContainer {
-        background-color: $burnertheme;
+        // background-color: $burnertheme;
         display: flex;
         width: 100%;
         max-width: 180rem;

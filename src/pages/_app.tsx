@@ -1,8 +1,38 @@
 import NavBar from '@/components/NavBar'
 import '../styles/Global.scss'
 import type { AppProps } from 'next/app'
+import { useState, useEffect, useRef } from 'react';
+import Lenis from '@studio-freight/lenis';
+
 
 export default function App({ Component, pageProps }: AppProps) {
+
+    // Lenis Scroll Starts Here
+
+    const [dimension, setDimension] = useState({ width: 0, height: 0 });
+    useEffect(() => {
+        const lenis = new Lenis()
+
+        const raf = (time: number) => {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        const resize = () => {
+            setDimension({ width: window.innerWidth, height: window.innerHeight })
+        }
+
+        window.addEventListener("resize", resize)
+        requestAnimationFrame(raf);
+        resize();
+
+        return () => {
+            window.removeEventListener("resize", resize);
+        }
+    }, [])
+
+    // Lenis Scroll Ends Here
+
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />

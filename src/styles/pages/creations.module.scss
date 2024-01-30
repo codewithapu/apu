@@ -3,6 +3,8 @@
 
 .Wraper {
     display: flex;
+    // margin-top: 5rem;
+    padding-top: 0rem;
 
     width: 100%;
     align-items: center;
@@ -16,6 +18,13 @@
         color: #7b7b7b;
         max-width: 180rem;
         overflow: hidden;
-        
+        .Hero {
+            padding: 10rem 4rem 0rem 4rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
     }
 }
