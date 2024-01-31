@@ -85,15 +85,16 @@
                 }
                 .PostTitle {
                     font-family: Nyght Serif Regular;
+                    font-family: Space Grotesk;
                     
                     font-weight: 400;
                     font-size: 6rem;
                     color: $crystalwhite;
-                    letter-spacing: 0rem;
-                    line-height: 110%;
+                    letter-spacing: -0.2rem;
+                    line-height: 120%;
                     text-align: center;
                     padding: 0rem 26rem;
-                    text-transform: lowercase;
+                    // text-transform: lowercase;
 
                     @media only screen and (max-width: 1460px) {
                         padding: 1rem 24rem 0rem 24rem;
@@ -141,7 +142,6 @@
             .PostDesc {
                 font-family: Lora;
 
-                // text-transform: lowercase;
                 color: $wraperslate;
                 font-size: 1.9rem;
                 line-height: 160%;
