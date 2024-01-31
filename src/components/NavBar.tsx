@@ -61,7 +61,7 @@ const NavBar = () => {
                         </svg>
 
                     </Link> */}
-                    <Link href="/" className={styles.Link}>
+                    <Link href="https://wa.me/917029008284" target="_blank" className={styles.Link}>
                         start a project
                     </Link>
                 </div>

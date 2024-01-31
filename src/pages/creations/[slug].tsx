@@ -71,8 +71,8 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
     return (
         <motion.div
             style={{ zIndex: 100 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y:20 }}
+            animate={{ opacity: 1, y : 0 }}
             exit="exit"
             transition={{ duration: 1, ease: [0.785, 0.135, 0.15, 0.86] }}
         >

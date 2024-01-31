@@ -29,6 +29,8 @@
             gap: 4rem;
 
             .BannerImage {
+                user-select: none;
+                pointer-events: none;
                 width: 100%;
                 max-width: 40rem;
                 object-fit: contain;
