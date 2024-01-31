@@ -70,11 +70,25 @@ body {
   src: url(/fonts/Geomanist-Bold.woff);
 }
 
+@font-face {
+  font-family: Burner Font Bold;
+  src: url(/fonts/BurnerFontBold.woff);
+}
+
+@font-face {
+  font-family: Burner Font;
+  src: url(/fonts/BurnerFont.woff);
+}
+
 @media (prefers-color-scheme: dark) {
   body{
     background-color: $surfaceprimarydark;
   }
 }
+
+
+
+
 
 @media (prefers-color-scheme: light) {
   body{

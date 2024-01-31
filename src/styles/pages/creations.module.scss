@@ -11,20 +11,161 @@
     flex-direction: column;
     .Container {
         width: 100%;
-        font-family: Space Grotesk;
-        font-size: 1.3rem;
-        font-weight: 400;
-        letter-spacing: -0.04rem;
-        color: #7b7b7b;
+
         max-width: 180rem;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
         .Hero {
             padding: 10rem 4rem 0rem 4rem;
 
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column-reverse;
+            flex-direction: column;
+            gap: 4rem;
+
+            .BannerImage {
+                width: 100%;
+                max-width: 40rem;
+                object-fit: contain;
+                box-shadow: 0 4px 60px rgba(0, 0, 0, 0.4);
+            }
+
+            .PostDetails {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+                .PostTag {
+                    text-decoration: none;
+                    font-family: Space Grotesk;
+                    font-weight: 600;
+                    opacity: 0.7;
+
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    color: $themelight;
+                    text-wrap: nowrap;
+                    letter-spacing: 0.1rem;
+                }
+                .PostTitle {
+                    font-family: Burner Font Bold;
+                    letter-spacing: 0rem;
+                    font-weight: 500;
+                    font-size: 10rem;
+                    color: $crystalwhite;
+                    letter-spacing: -0.6rem;
+                    line-height: 120%;
+                    text-align: center;
+                    padding: 0rem 26rem;
+
+                    @media only screen and (max-width: 1460px) {
+                        padding: 1rem 24rem 0rem 24rem;
+                    }
+        
+                    @media only screen and (max-width: 1200px) {
+                        padding: 1rem 10rem 0rem 10rem;
+                    }
+        
+                    @media only screen and (max-width: 1000px) {
+                        padding: 1rem 4rem 0rem 4rem;
+                    }
+        
+                    @media only screen and (max-width: 600px) {
+                        padding: 1rem 4rem 0rem 4rem;
+                    }
+                }
+            }
+        }
+
+        .Content {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 0rem 36rem 0rem 36rem;
+
+            @media only screen and (max-width: 1460px) {
+                padding: 1rem 24rem 0rem 24rem;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                padding: 1rem 10rem 0rem 10rem;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                padding: 1rem 4rem 0rem 4rem;
+            }
+
+            @media only screen and (max-width: 600px) {
+                padding: 1rem 4rem 0rem 4rem;
+            }
+
+            .PostDesc {
+                font-family: Geomanist Medium;
+                text-transform: lowercase;
+                color: $wraperslate;
+                font-size: 2rem;
+                line-height: 160%;
+
+                @media only screen and (max-width: 600px){
+                    font-size: 1.5rem;
+                }
+            }
+
+            .ProductUrl{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                background-color: $crystalwhite;
+    
+                height: 10rem;
+                width: 10rem;
+                padding: 0.5rem;
+    
+                border-radius: 6rem;
+                
+                .LinkIcon{
+                    height: 6rem;
+                    width: 6rem;
+                }
+            }
+        }
+
+
+        .AutographContainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 0rem 36rem 10rem 36rem;
+
+            @media only screen and (max-width: 1460px) {
+                padding: 1rem 24rem 15rem 24rem;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                padding: 1rem 10rem 5rem 10rem;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                padding: 1rem 4rem 5rem 4rem;
+            }
+
+            @media only screen and (max-width: 600px) {
+                padding: 1rem 4rem 5rem 4rem;
+            }
+            .Signature{
+                user-select: none;
+                height: 6rem;
+                mix-blend-mode: screen;
+            }
         }
     }
 }

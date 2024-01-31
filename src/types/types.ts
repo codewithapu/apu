@@ -4,5 +4,6 @@ export interface Creation {
     title: string;
     description: string;
     tag: string;
+    product_url: string;
     link: string;
   }

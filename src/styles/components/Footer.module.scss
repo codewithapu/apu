@@ -20,6 +20,11 @@
 
         padding: 5rem 5rem;
 
+
+        @media only screen and (max-width: 800px) {
+            padding: 5rem 1.6rem;
+        }
+
         .HomeLink {
             cursor: pointer;
         }
