@@ -84,14 +84,6 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
                     <div className={styles.Hero} style={gradientStyle}>
 
                         <img draggable="false" src={creation.thumbnail_url} className={styles.BannerImage} />
-                        <div className={styles.PostDetails}>
-                            <p className={styles.PostTag}>{creation.tag}</p>
-                            <h1 className={styles.PostTitle}>{creation.title}</h1>
-                        </div>
-                    </div>
-
-                    <div className={styles.Content}>
-                        <p className={styles.PostDesc}>{creation.description}</p>
                         <Link href={creation.product_url} target="_blank" className={styles.ProductUrl}>
                             <svg className={styles.LinkIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
                                 <path d="M13 26.6429L14.3571 28L27.9277 14.4294L26.5706 13.0723L13 26.6429Z" fill="black" />
@@ -99,6 +91,16 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
                                 <path d="M13.6062 13V14.9192H28V13L13.6062 13Z" fill="black" />
                             </svg>
                         </Link>
+                        <div className={styles.PostDetails}>
+                            <p className={styles.PostTag}>{creation.tag}</p>
+                            <h1 className={styles.PostTitle}>{creation.title}</h1>
+                        </div>
+                    </div>
+
+                    <div className={styles.Content}>
+
+                        <p className={styles.PostDesc}>{creation.description}</p>
+
                     </div>
 
 

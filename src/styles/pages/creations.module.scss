@@ -7,7 +7,6 @@
 
 .Wraper {
     display: flex;
-    // margin-top: 5rem;
     padding-top: 0rem;
 
     width: 100%;
@@ -15,15 +14,14 @@
     flex-direction: column;
     .Container {
         width: 100%;
-
         max-width: 180rem;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        gap: 5rem;
+        gap: 1rem;
         .Hero {
-            padding: 10rem 4rem 0rem 4rem;
-
+            padding: 10rem 0rem 0rem 0rem;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,7 +35,38 @@
                 box-shadow: 0 4px 60px rgba(0, 0, 0, 0.4);
             }
 
+            .ProductUrl {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: $crystalwhite;
+
+                height: 8rem;
+                width: 12rem;
+                padding: 0.5rem;
+
+                border-radius: 6rem;
+                @include Smooth();
+                &:hover {
+                    background-color: antiquewhite;
+                    .LinkIcon {
+                        padding: 0rem;
+                    }
+                }
+
+                .LinkIcon {
+                    padding: 1rem;
+                    @include Smooth();
+                    height: 6rem;
+                    width: 6rem;
+                }
+            }
+
             .PostDetails {
+                width: 100%;
+                background-color: #1212123f;
+                padding: 4rem 0rem;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
@@ -56,9 +85,8 @@
                 }
                 .PostTitle {
                     font-family: Nyght Serif Regular;
-                    font-style: italic;
                     font-weight: 400;
-                    font-size: 10rem;
+                    font-size: 6rem;
                     color: $crystalwhite;
                     letter-spacing: 0rem;
                     line-height: 110%;
@@ -91,7 +119,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 3rem;
             padding: 0rem 36rem 0rem 36rem;
 
             @media only screen and (max-width: 1460px) {
@@ -119,34 +146,6 @@
 
                 @media only screen and (max-width: 600px) {
                     font-size: 1.5rem;
-                }
-            }
-
-            .ProductUrl {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                background-color: $crystalwhite;
-
-                height: 10rem;
-                width: 10rem;
-                padding: 0.5rem;
-
-                border-radius: 6rem;
-                @include Smooth();
-                &:hover {
-                    background-color: antiquewhite;
-                    .LinkIcon {
-                        padding: 0rem;
-                    }
-                }
-
-                .LinkIcon {
-                    padding: 1rem;
-                    @include Smooth();
-                    height: 6rem;
-                    width: 6rem;
                 }
             }
         }
