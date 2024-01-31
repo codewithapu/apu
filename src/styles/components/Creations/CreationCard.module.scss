@@ -37,13 +37,15 @@
 
             .Title {
                 font-family: Geomanist Medium;
+                font-family: Space Grotesk;
+
                 letter-spacing: 0rem;
                 font-weight: 500;
                 font-size: 1.4rem;
                 color: $themedark;
                 color: $wraperslate;
                 display: inline-flex;
-                letter-spacing: 0.03rem;
+                letter-spacing: -0.02rem;
                 gap: 1rem;
                 line-height: 130%;
             }

@@ -41,7 +41,7 @@ const NavBar = () => {
                     </motion.svg>
                 </Link>
                 <div className={styles.NavLinks}>
-                    <Link href="#creations" className={styles.Link}>
+                    {/* <Link href="#creations" className={styles.Link}>
                         works
                     </Link>
                     <Link href="/" className={styles.Link}>
@@ -60,7 +60,7 @@ const NavBar = () => {
                             </g>
                         </svg>
 
-                    </Link>
+                    </Link> */}
                     <Link href="/" className={styles.Link}>
                         start a project
                     </Link>

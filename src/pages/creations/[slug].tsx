@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -83,7 +84,7 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
                 <div className={styles.Container}>
                     <div className={styles.Hero} style={gradientStyle}>
 
-                        <img draggable="false" src={creation.thumbnail_url} className={styles.BannerImage} />
+                        <img loading="lazy" draggable="false" src={creation.thumbnail_url} className={styles.BannerImage} />
                         <Link href={creation.product_url} target="_blank" className={styles.ProductUrl}>
                             <svg className={styles.LinkIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
                                 <path d="M13 26.6429L14.3571 28L27.9277 14.4294L26.5706 13.0723L13 26.6429Z" fill="black" />
@@ -99,9 +100,20 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
 
                     <div className={styles.Content}>
 
-                        <p className={styles.PostDesc}>{creation.description}</p>
+                        {/* <p className={styles.PostDesc}>{creation.description}</p> */}
 
+                        <p className={styles.PostDesc}>
+                        {creation.description.split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                                {line}
+                                <br />
+                                <br />
+                            </React.Fragment>
+                        ))}
+                    </p>
                     </div>
+
+
 
 
 
