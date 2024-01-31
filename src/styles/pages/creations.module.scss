@@ -28,13 +28,20 @@
             flex-direction: column;
             gap: 6rem;
 
-            .BannerImage {
-                user-select: none;
-                pointer-events: none;
-                width: 100%;
-                max-width: 40rem;
-                object-fit: contain;
-                box-shadow: 0 4px 60px rgba(0, 0, 0, 0.4);
+            .BannerContainer {
+                .BannerImage {
+                    user-select: none;
+                    pointer-events: none;
+                    width: 100%;
+                    max-width: 40rem;
+                    object-fit: contain;
+
+                    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.4);
+                }
+
+                @media only screen and (max-width: 1000px) {
+                    margin: 0rem 4rem;
+                }
             }
 
             .ProductUrl {
@@ -84,34 +91,60 @@
                     color: $themelight;
                     text-wrap: nowrap;
                     letter-spacing: 0.1rem;
-                }
-                .PostTitle {
-                    font-family: Nyght Serif Regular;
-                    font-family: Space Grotesk;
-                    
-                    font-weight: 400;
-                    font-size: 6rem;
-                    color: $crystalwhite;
-                    letter-spacing: -0.2rem;
-                    line-height: 120%;
                     text-align: center;
-                    padding: 0rem 26rem;
-                    // text-transform: lowercase;
+                    width: 100%;
+                    padding: 0rem 36rem 0rem 36rem;
+
 
                     @media only screen and (max-width: 1460px) {
                         padding: 1rem 24rem 0rem 24rem;
+                        text-align: left;
                     }
-
+        
                     @media only screen and (max-width: 1200px) {
                         padding: 1rem 10rem 0rem 10rem;
                     }
 
                     @media only screen and (max-width: 1000px) {
                         padding: 1rem 4rem 0rem 4rem;
+                        font-size: 1.2rem;
+                        text-align: left;
+                    }
+        
+                    @media only screen and (max-width: 600px) {
+                        padding: 1rem 2rem 0rem 2rem;
+                    }
+                }
+                .PostTitle {
+                    font-family: Nyght Serif Regular;
+                    font-family: Space Grotesk;
+                    width: 100%;
+                    font-weight: 400;
+                    font-size: 6rem;
+                    color: $crystalwhite;
+                    letter-spacing: -0.2rem;
+                    line-height: 120%;
+                    text-align: center;
+
+                    padding: 0rem 36rem 0rem 36rem;
+
+                    @media only screen and (max-width: 1460px) {
+                        padding: 1rem 24rem 0rem 24rem;
+                        text-align: left;
+                    }
+        
+                    @media only screen and (max-width: 1200px) {
+                        padding: 1rem 10rem 0rem 10rem;
                     }
 
-                    @media only screen and (max-width: 600px) {
+                    @media only screen and (max-width: 1000px) {
                         padding: 1rem 4rem 0rem 4rem;
+                        font-size: 3rem;
+                        text-align: left;
+                    }
+        
+                    @media only screen and (max-width: 600px) {
+                        padding: 1rem 2rem 0rem 2rem;
                     }
                 }
             }

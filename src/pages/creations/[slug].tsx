@@ -92,8 +92,10 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
             <div className={styles.Wraper} data-lenis-prevent-touch>
                 <div className={styles.Container}>
                     <div className={styles.Hero} style={gradientStyle}>
+                        <div className={styles.BannerContainer}>
+                            <img loading="lazy" draggable="false" src={creation.thumbnail_url} className={styles.BannerImage} />
 
-                        <img loading="lazy" draggable="false" src={creation.thumbnail_url} className={styles.BannerImage} />
+                        </div>
                         {creation.product_url && (
                             <Link href={creation.product_url} target="_blank" className={styles.ProductUrl}>
                                 <svg className={styles.LinkIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
