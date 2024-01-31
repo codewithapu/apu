@@ -71,8 +71,8 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
     return (
         <motion.div
             style={{ zIndex: 100 }}
-            initial={{ opacity: 0, y:20 }}
-            animate={{ opacity: 1, y : 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             exit="exit"
             transition={{ duration: 1, ease: [0.785, 0.135, 0.15, 0.86] }}
         >
@@ -85,13 +85,15 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
                     <div className={styles.Hero} style={gradientStyle}>
 
                         <img loading="lazy" draggable="false" src={creation.thumbnail_url} className={styles.BannerImage} />
-                        <Link href={creation.product_url} target="_blank" className={styles.ProductUrl}>
-                            <svg className={styles.LinkIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-                                <path d="M13 26.6429L14.3571 28L27.9277 14.4294L26.5706 13.0723L13 26.6429Z" fill="black" />
-                                <path d="M26.0808 13V27.3938H28V13H26.0808Z" fill="black" />
-                                <path d="M13.6062 13V14.9192H28V13L13.6062 13Z" fill="black" />
-                            </svg>
-                        </Link>
+                        {creation.product_url && (
+                            <Link href={creation.product_url} target="_blank" className={styles.ProductUrl}>
+                                <svg className={styles.LinkIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                                    <path d="M13 26.6429L14.3571 28L27.9277 14.4294L26.5706 13.0723L13 26.6429Z" fill="black" />
+                                    <path d="M26.0808 13V27.3938H28V13H26.0808Z" fill="black" />
+                                    <path d="M13.6062 13V14.9192H28V13L13.6062 13Z" fill="black" />
+                                </svg>
+                            </Link>
+                        )}
                         <div className={styles.PostDetails}>
                             <p className={styles.PostTag}>{creation.tag}</p>
                             <h1 className={styles.PostTitle}>{creation.title}</h1>
@@ -103,14 +105,14 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
                         {/* <p className={styles.PostDesc}>{creation.description}</p> */}
 
                         <p className={styles.PostDesc}>
-                        {creation.description.split('\n').map((line, index) => (
-                            <React.Fragment key={index}>
-                                {line}
-                                <br />
-                                <br />
-                            </React.Fragment>
-                        ))}
-                    </p>
+                            {creation.description.split('\n').map((line, index) => (
+                                <React.Fragment key={index}>
+                                    {line}
+                                    <br />
+                                    <br />
+                                </React.Fragment>
+                            ))}
+                        </p>
                     </div>
 
 
