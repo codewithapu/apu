@@ -1,6 +1,10 @@
 @use "../color";
 @import "../color";
 
+@mixin Smooth {
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
 .Wraper {
     display: flex;
     // margin-top: 5rem;
@@ -51,28 +55,29 @@
                     letter-spacing: 0.1rem;
                 }
                 .PostTitle {
-                    font-family: Burner Font Bold;
-                    letter-spacing: 0rem;
-                    font-weight: 500;
+                    font-family: Nyght Serif Regular;
+                    font-style: italic;
+                    font-weight: 400;
                     font-size: 10rem;
                     color: $crystalwhite;
-                    letter-spacing: -0.6rem;
-                    line-height: 120%;
+                    letter-spacing: 0rem;
+                    line-height: 110%;
                     text-align: center;
                     padding: 0rem 26rem;
+                    text-transform: lowercase;
 
                     @media only screen and (max-width: 1460px) {
                         padding: 1rem 24rem 0rem 24rem;
                     }
-        
+
                     @media only screen and (max-width: 1200px) {
                         padding: 1rem 10rem 0rem 10rem;
                     }
-        
+
                     @media only screen and (max-width: 1000px) {
                         padding: 1rem 4rem 0rem 4rem;
                     }
-        
+
                     @media only screen and (max-width: 600px) {
                         padding: 1rem 4rem 0rem 4rem;
                     }
@@ -112,33 +117,41 @@
                 font-size: 2rem;
                 line-height: 160%;
 
-                @media only screen and (max-width: 600px){
+                @media only screen and (max-width: 600px) {
                     font-size: 1.5rem;
                 }
             }
 
-            .ProductUrl{
+            .ProductUrl {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
+
                 background-color: $crystalwhite;
-    
+
                 height: 10rem;
                 width: 10rem;
                 padding: 0.5rem;
-    
+
                 border-radius: 6rem;
-                
-                .LinkIcon{
+                @include Smooth();
+                &:hover {
+                    background-color: antiquewhite;
+                    .LinkIcon {
+                        padding: 0rem;
+                    }
+                }
+
+                .LinkIcon {
+                    padding: 1rem;
+                    @include Smooth();
                     height: 6rem;
                     width: 6rem;
                 }
             }
         }
 
-
-        .AutographContainer{
+        .AutographContainer {
             width: 100%;
             display: flex;
             align-items: center;
@@ -161,7 +174,7 @@
             @media only screen and (max-width: 600px) {
                 padding: 1rem 4rem 5rem 4rem;
             }
-            .Signature{
+            .Signature {
                 user-select: none;
                 height: 6rem;
                 mix-blend-mode: screen;
