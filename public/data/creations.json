@@ -1,6 +1,16 @@
 [
+
     {
         "id": "1",
+        "thumbnail_url": "https://ik.imagekit.io/0h5il6u6e/Creations/PRICING.png?updatedAt=1706722108250",
+        "link": "https://amzn.eu/d/2WIOj2I",
+        "title": "How to set pricing for your product",
+        "description": "Developed and authored the book titled Informatics Practices Class XII specifically tailored for students of class 12 in the CBSE curriculum.\nDesigned as a comprehensive resource to assist students in mastering Informatics Practices and staying up-to-date with the latest trends in technology.\nCovers a range of topics, including Python programming, data analysis with pandas, data visualization using matplotlib, and database management with SQL.Provides a structured and systematic approach to learning these technologies, ensuring a strong foundation for students.\nIncorporates practical examples, exercises, and coding challenges to reinforce concepts and facilitate hands-on learning.\nOffers explanations and step-by-step instructions to guide students through complex programming concepts and techniques.",
+        "tag": "research",
+        "product_url": "https://amzn.eu/d/0kcCIT5"
+    },
+    {
+        "id": "2",
         "thumbnail_url": "https://ik.imagekit.io/0h5il6u6e/Creations/BookBanner.png?updatedAt=1706525213617",
         "link": "https://amzn.eu/d/2WIOj2I",
         "title": "Author & Designer : CBSE Class 12 IPR",
@@ -8,4 +18,5 @@
         "tag": "book",
         "product_url": "https://amzn.eu/d/0kcCIT5"
     }
+
 ]
