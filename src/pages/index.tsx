@@ -97,10 +97,9 @@ export default function Home() {
               <path d="M1635.9 157.98C1589.48 157.98 1557.36 123.22 1557.36 79C1557.36 34.56 1589.48 0.0200195 1635.9 0.0200195C1682.32 0.0200195 1714.66 34.56 1714.66 79C1714.66 123.22 1682.32 157.98 1635.9 157.98ZM1580.9 79C1580.9 110.24 1602.68 136.2 1635.9 136.2C1669.12 136.2 1691.12 110.24 1691.12 79C1691.12 47.76 1669.12 21.8 1635.9 21.8C1602.68 21.8 1580.9 47.76 1580.9 79Z" />
             </motion.svg>
 
-            {/* <div className={styles.CTALinks}>
-              <Link className={styles.CTALink} href="/">start a project</Link>
-              <Link className={styles.CTALink} href="/">chat with me</Link>
-            </div> */}
+            <div className={styles.CTALinks}>
+              <Link className={styles.CTALink} href="https://wa.me/917029008284">start a project</Link>
+            </div>
 
 
             <div className={styles.Technologies}>
