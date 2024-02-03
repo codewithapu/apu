@@ -1,8 +1,8 @@
 {
     "name": "Supriyo M.",
     "short_name": "Supriyo",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#000",
+    "background_color": "#000",
     "display": "standalone",
     "orientation": "portrait",
     "description": "Product Designer from India",
