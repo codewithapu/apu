@@ -81,7 +81,7 @@ const CreationPage: React.FC<CreationPageProps> = ({ creation }) => {
                 <meta name="description" content="Design Engineer From India" />
                 <meta property="og:site_name" content="Supriyo M." />
                 <meta property="og:title" content={creation.title} />
-                <meta property="og:image" content={creation.thumbnail_url} />
+                <meta property="og:image" itemProp="image" content={creation.thumbnail_url} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:description"
